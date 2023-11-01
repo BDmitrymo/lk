@@ -1,0 +1,15 @@
+.as__auth {
+  display: flex;
+  height: 100%;
+
+  &_item {
+    width: 50%;
+
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
