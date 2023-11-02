@@ -1,8 +1,8 @@
-import React from "react";
-import {Route, Routes} from "react-router-dom";
-import {SignIn} from "./pages/SignIn/SignIn";
-import {SignUp} from "./pages/SignUp/SignUp";
-import "./App.scss";
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import {SignIn} from './pages/SignIn/SignIn';
+import {SignUp} from './pages/SignUp/SignUp';
+import './App.scss';
 
 function App() {
   return (

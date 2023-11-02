@@ -2,7 +2,7 @@ import React from "react"
 import {Carousel} from "antd";
 import "./CarouselBanner.scss"
 
-export const CarouselBanner = ({children}: { children: React.ReactNode[] }) => {
+export const CarouselBanner = ({banners}: { banners: React.ReactNode[] }) => {
   const CarouselBannerItem = ({urlImg}:{urlImg: any}) => {
     return (
       <div className="sb__carousel-banner_item">
@@ -13,7 +13,7 @@ export const CarouselBanner = ({children}: { children: React.ReactNode[] }) => {
 
   return (
     <Carousel className="sb__carousel-banner" autoplay>
-      {children?.map((i, index) => <CarouselBannerItem key={index} urlImg={i}/>)}
+      {banners?.map((banner, index) => <CarouselBannerItem key={index} urlImg={banner}/>)}
     </Carousel>
   )
 }

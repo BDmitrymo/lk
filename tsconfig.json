@@ -8,10 +8,6 @@
     "skipLibCheck": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "paths": {
-      "@/*": ["./src/*"],
-      "@assets/*": ["./assets/*"]
-    },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
