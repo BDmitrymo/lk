@@ -12,7 +12,7 @@ export const CarouselBanner = ({banners}: { banners: React.ReactNode[] }) => {
   }
 
   return (
-    <Carousel className="sb__carousel-banner" autoplay>
+    <Carousel className="sb__carousel-banner">
       {banners?.map((banner, index) => <CarouselBannerItem key={index} urlImg={banner}/>)}
     </Carousel>
   )

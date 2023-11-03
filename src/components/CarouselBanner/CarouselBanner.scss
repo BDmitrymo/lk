@@ -2,8 +2,8 @@
   .sb__carousel-banner_item {
     img {
       width: 100%;
+      height: calc(100vh - 40px);
       object-fit: cover;
-      height: 100vh;
     }
   }
 }
