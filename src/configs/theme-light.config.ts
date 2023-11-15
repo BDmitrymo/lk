@@ -1,3 +1,3 @@
 export const THEME_LIGHT = {
-  colorPrimary: '#47afff'
+  colorPrimary: '#47afff',
 };

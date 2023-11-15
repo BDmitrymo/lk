@@ -12,5 +12,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .as__auth_box {
+      width: 100%;
+      max-width: 436px;
+    }
   }
+}
+
+.as__auth_input {
+  padding: 7px;
+}
+
+.as__auth_form-item {
+  margin-bottom: 12px;
+}
+
+.as__auth_button {
+  height: 38px;
+  border-radius: 20px;
 }

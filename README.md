@@ -5,6 +5,11 @@ https://github.com/riccox/meilisearch-ui \
 https://github.com/ant-design/ant-design-pro
 
 ## Дизайн аутентификации
-https://dribbble.com/shots/21363706-Haze-Website-Log-in-Page
-https://dribbble.com/shots/20448736-TimeTracker-Sign-Up-Sign-In-Page
-https://dribbble.com/shots/22583771-Login-Registration
+https://dribbble.com/shots/21363706-Haze-Website-Log-in-Page \
+https://dribbble.com/shots/20448736-TimeTracker-Sign-Up-Sign-In-Page \
+https://dribbble.com/shots/22583771-Login-Registration \
+https://dashboard.callshark.ru/registration?lang=ru \
+https://dribbble.com/session/new
+
+## I18n
+https://react.i18next.com/getting-started

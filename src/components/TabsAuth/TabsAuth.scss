@@ -1,0 +1,24 @@
+.as__auth_tabs {
+  .ant-tabs-nav {
+    padding: 2px;
+    border: 1px solid #47afff;
+    border-radius: 20px;
+    width: 100%;
+
+    &:before {
+      border-bottom: none;
+    }
+
+    .ant-tabs-nav-list {
+      width: 100%;
+    }
+
+    .ant-tabs-tab {
+      width: 50%;
+
+      &_active {
+        border: none;
+      }
+    }
+  }
+}

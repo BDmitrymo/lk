@@ -1,19 +1,17 @@
 import React from 'react';
+import {Route, Routes} from 'react-router-dom';
 import {ConfigProvider} from 'antd';
 import {THEME_LIGHT} from './configs/theme-light.config';
-import {Route, Routes} from 'react-router-dom';
-import {SignIn} from './pages/SignIn/SignIn';
-import {SignUp} from './pages/SignUp/SignUp';
+import {SignIn, SignUp} from './pages/Auth/Auth';
+import {initI18n} from './modules/i18n/i18n';
 import './App.scss';
 
-function App() {
+export default function App() {
+  initI18n('ru');
+
   return (
     <ConfigProvider theme={{token: THEME_LIGHT}}>
       <div className="App">
-        {/*<div>*/}
-        {/*  <Link to="/login">Войти</Link>*/}
-        {/*  <Link to="/signup">Регистрация</Link>*/}
-        {/*</div>*/}
         <Routes>
           <Route path="/" element={<SignUp/>}></Route>
           <Route path="/signin" element={<SignIn/>}></Route>
@@ -23,5 +21,3 @@ function App() {
     </ConfigProvider>
   );
 }
-
-export default App;
