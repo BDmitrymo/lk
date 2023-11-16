@@ -9,16 +9,14 @@ import {SignUpPhoneForm} from '../../../components/forms/SignUpPhoneForm/SignUpP
 import './SignUp.scss';
 
 export const SignUp = () => {
-  const items: ITabsItems[] = [
+  const items: any = [
     {
-      key: 1,
-      label: 'Почта',
       children: <SignUpDefaultForm/>,
+      value: 'Почта',
     },
     {
-      key: 2,
-      label: 'Телефон',
       children: <SignUpPhoneForm/>,
+      value: 'Телефон',
     }
   ];
 
@@ -28,7 +26,7 @@ export const SignUp = () => {
         <div className="as__auth_box">
           {/*<Link to="/login">Войти</Link>*/}
           {/*<LanguageSwitcher/>*/}
-          <TabsAuth defaultActiveKeyTab={1} items={items}/>
+          <TabsAuth defaultActiveKeyTab='Почта' items={items}/>
         </div>
       </div>
       <div className="as__auth_item">

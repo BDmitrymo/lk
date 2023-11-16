@@ -1,49 +1,41 @@
 import React, {ReactNode, useEffect, useState} from 'react';
-import {Button} from 'antd';
+import {Button, Segmented, Space} from 'antd';
 import './TabsAuth.scss';
 
 export interface ITabsItems {
-  key: number;
-  label: string;
+  value: string;
   children: ReactNode;
 }
 
 interface ITabsAuth {
-  defaultActiveKeyTab: number;
-  items: ITabsItems[];
+  defaultActiveKeyTab: string;
+  items: any
 }
 
 export const TabsAuth = ({defaultActiveKeyTab, items}: ITabsAuth) => {
   const [activeTab, setActiveTab] = useState<ITabsItems>();
-
-  const handlerActiveTab = (id: number) => {
-    const tab = items.filter(i => i.key === id)[0];
-
-    setActiveTab(tab);
-  };
+  const [options, setOptions] = useState([])
 
   useEffect(() => {
-    const tab = items.filter(i => i.key === defaultActiveKeyTab)[0];
-    setActiveTab(tab);
+    const tab = items.filter((i:any) => i.value === defaultActiveKeyTab)[0];
+    setOptions(items.map((item: any) => item.value))
+
+    console.log(tab)
+
+    setActiveTab(tab)
   }, []);
 
-  const ButtonNav = ({id, title}: { id: number, title?: string }) => {
-    return (
-      <Button
-        key={id}
-        type="primary"
-        shape="circle"
-        onClick={() => handlerActiveTab(id)}
-      >
-        {title}
-      </Button>
-    );
-  };
+  const handlerChangeActiveTab = (value: any) => {
+    const tab = items.filter((i:any) => i.value === value)[0];
+    setActiveTab(tab)
+  }
 
   return (
     <div className="as__auth_tabs">
       <div className="as__auth_tabs-nav">
-        {items?.map(i => <ButtonNav key={i.key} id={i.key} title={i.label}/>)}
+        <div className="as__auth_tabs-nav-wrap space-align-block">
+          {options && <Segmented options={options} value={activeTab?.value} onChange={handlerChangeActiveTab}/>}
+        </div>
       </div>
       <div className="as__auth_tabs-content">
         {activeTab?.children}
