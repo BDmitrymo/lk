@@ -1,9 +1,9 @@
 import React from 'react';
 import {Select} from 'antd';
 import {useTranslation} from 'react-i18next';
-import './LanguageSwitcher.scss';
+import './SwitchLang.scss';
 
-export const LanguageSwitcher = ({lang = 'ru'}:{lang?: string}) => {
+export const SwitchLang = ({lang = 'ru'}:{lang?: string}) => {
   const {i18n} = useTranslation();
 
   const changeLanguage = (lang: string) => {
@@ -12,6 +12,7 @@ export const LanguageSwitcher = ({lang = 'ru'}:{lang?: string}) => {
 
   return (
     <Select
+      className="as__switch-lang"
       defaultValue={lang}
       onChange={changeLanguage}
       options={[

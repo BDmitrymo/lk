@@ -1,6 +1,8 @@
 .as__auth_tabs {
   .as__auth_tabs-nav {
-    .as__auth_tabs-tab {
-    }
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }

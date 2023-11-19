@@ -1,3 +1,12 @@
 export const THEME_LIGHT = {
-  colorPrimary: '#47afff',
+  token: {
+    colorPrimary: '#47afff',
+    borderRadius: 10
+  },
+  components: {
+    Segmented: {
+      itemSelectedBg: '#47afff',
+      itemSelectedColor: '#ffffff'
+    },
+  },
 };

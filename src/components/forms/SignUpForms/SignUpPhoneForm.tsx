@@ -1,23 +1,24 @@
 import React from 'react';
 import {Button, Form, Input} from 'antd';
-import './SignUpPhoneForm.scss';
 
 export const SignUpPhoneForm = () => {
   return (
-    <form>
+    <Form layout="vertical">
       <Form.Item
+        label="Введите имя"
         name="text"
         rules={[{required: true, message: 'Please input your password!'}]}
       >
-        <Input placeholder="Введите имя" required/>
+        <Input size="large" required/>
       </Form.Item>
       <Form.Item
+        label="Введите телефон"
         name="text"
         rules={[{required: true, message: 'Please input your password!'}]}
       >
-        <Input placeholder="Введите телефон" required/>
+        <Input size="large" required/>
       </Form.Item>
-      <Button type="primary" block>Далее</Button>
-    </form>
+      <Button size="large" type="primary" block>Далее</Button>
+    </Form>
   );
 };

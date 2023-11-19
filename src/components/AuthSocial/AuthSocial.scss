@@ -1,0 +1,18 @@
+.as__auth_social {
+  display: flex;
+  flex-direction: column;
+
+  .as__auth_social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    height: max-content;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
+  }
+}
