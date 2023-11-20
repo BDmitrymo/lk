@@ -4,18 +4,18 @@ import Title from 'antd/es/typography/Title';
 import {Link} from 'react-router-dom';
 import {SwitchLang} from '../components/ui/SwitchLang/SwitchLang';
 import {CarouselBanner} from '../components/ui/CarouselBanner/CarouselBanner';
-import {TabsAuth} from '../components/TabsAuth/TabsAuth';
-import {SignUpDefaultForm} from '../components/forms/SignUpForms/SignUpDefaultForm';
+import {TabsAuth} from '../components/auth/components/TabsAuth/TabsAuth';
 import {SignUpPhoneForm} from '../components/forms/SignUpForms/SignUpPhoneForm';
-import {AuthSocial} from '../components/AuthSocial/AuthSocial';
+import {AuthSocial} from '../components/auth/components/AuthSocial/AuthSocial';
 import {Divider} from '../components/ui/Divider/Divider';
+import {SignUp} from '../components/auth/SignUp';
 import '../styles/auth.scss';
 
-export const SignUp = () => {
+export const SignUpPage = () => {
   const items = [
     {
       value: 'Почта',
-      children: <SignUpDefaultForm/>
+      children: <SignUp/>
     },
     {
       value: 'Телефон',
