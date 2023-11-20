@@ -1,9 +1,9 @@
 import {initReactI18next} from 'react-i18next';
 import i18n from 'i18next';
-import ruTranslation from './locales/ru.json';
-import enTranslation from './locales/en.json';
+import ruTranslation from './locales/ru/ru.json';
+import enTranslation from './locales/en/en.json';
 
-export function initI18n(lang:string) {
+export function initI18n(lang: string) {
   i18n
     .use(initReactI18next)
     .init({

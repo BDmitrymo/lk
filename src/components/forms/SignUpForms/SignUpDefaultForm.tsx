@@ -3,18 +3,14 @@ import {Button, Form, Input} from 'antd';
 import {useTranslation} from 'react-i18next';
 
 export const SignUpDefaultForm = () => {
-  const {t} = useTranslation();
+  const {t} = useTranslation(['translation', 'common']);
 
   const handleSend = (values: any) => {
     console.log('Success:', values);
   };
 
   return (
-    <Form
-      layout="vertical"
-      autoComplete="off"
-      onFinish={handleSend}
-    >
+    <Form layout="vertical" autoComplete="off" onFinish={handleSend}>
       <Form.Item
         label="Введите имя"
         name="username"
@@ -35,7 +31,7 @@ export const SignUpDefaultForm = () => {
         htmlType="submit"
         block
       >
-        {t('buttonX')}
+        {t('common.further')}
       </Button>
     </Form>
   );

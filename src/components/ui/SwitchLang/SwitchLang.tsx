@@ -3,7 +3,7 @@ import {Select} from 'antd';
 import {useTranslation} from 'react-i18next';
 import './SwitchLang.scss';
 
-export const SwitchLang = ({lang = 'ru'}:{lang?: string}) => {
+export const SwitchLang = ({lang = 'ru'}: { lang?: string }) => {
   const {i18n} = useTranslation();
 
   const changeLanguage = (lang: string) => {

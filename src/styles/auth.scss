@@ -6,21 +6,15 @@
 
   &_item {
     position: relative;
-    width: 50%;
+    width: 100%;
   }
 
   &_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
     max-width: 500px;
-    margin-right: 30px;
-
-    .as__auth_box {
-      position: relative;
-      width: 100%;
-    }
+    margin: 20px 30px;
   }
 
   &_banner {
@@ -29,7 +23,7 @@
 
   .as__switch-lang {
     position: absolute;
-    right: 50px;
-    top: 20px;
+    right: 0;
+    top: 0;
   }
 }
