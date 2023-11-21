@@ -1,22 +1,6 @@
-.ant-carousel {
-  height: 100%;
-  .as__carousel-banner {
-    border-radius: 20px;
-    height: 100%;
-
-    .slick-list {
-      display: flex;
-      height: 100%;
-      flex-direction: column;
-    }
-
-    .as__carousel-banner_item {
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
+.as__carousel-banner {
+  border-radius: 20px;
+  overflow: hidden;
 }
+
 

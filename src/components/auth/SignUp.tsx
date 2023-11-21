@@ -3,7 +3,7 @@ import {SignUpDefaultForm} from '../forms/SignUpForms/SignUpDefaultForm';
 import {SignUpPasswordForm} from '../forms/SignUpForms/SignUpPasswordForm';
 
 export const SignUp = () => {
-  const [step, setStep] = useState('step1')
+  const [step, setStep] = useState('step2')
 
   const handlerSetStep = (step:string) => {
     setStep(step)

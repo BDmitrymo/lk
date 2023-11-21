@@ -4,15 +4,11 @@ import './CarouselBanner.scss';
 
 export const CarouselBanner = ({banners}: { banners: React.ReactNode[] }) => {
   const CarouselBannerItem = ({urlImg}: { urlImg: any }) => {
-    return (
-      <div className="as__carousel-banner_item">
-        <img src={urlImg} alt={urlImg}/>
-      </div>
-    );
+    return <img className="as__carousel-banner_img" src={urlImg} alt={urlImg}/>
   };
 
   return (
-    <Carousel className="as__carousel-banner" infinite={false} autoplay>
+    <Carousel className="as__carousel-banner" autoplay>
       {banners?.map((banner, index) => <CarouselBannerItem key={index} urlImg={banner}/>)}
     </Carousel>
   );

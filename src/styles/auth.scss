@@ -1,17 +1,12 @@
 .as__auth {
   height: 100vh;
-  width: 100vw;
   padding: 30px;
   margin: 0;
 
-  &_item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
   &_content {
+    position: relative;
     max-width: 500px;
+    width: 100%;
 
     .as__auth_form-item {
       margin-bottom: 15px;
@@ -19,7 +14,7 @@
   }
 
   &_banner {
-    max-width: 600px;
+    width: 600px;
   }
 
   .as__switch-lang {
