@@ -8,6 +8,7 @@ export const SignUpPasswordForm = () => {
 
       <Form layout="vertical">
         <Form.Item
+          className="as__auth_form-item"
           label="Задайте пароль"
           name="password"
           rules={[{required: true, message: 'Please input your password!'}]}
@@ -15,6 +16,7 @@ export const SignUpPasswordForm = () => {
           <Input.Password size="large" placeholder="Введите пароль"/>
         </Form.Item>
         <Form.Item
+          className="as__auth_form-item"
           label="Повторите пароль"
           name="repeatPassword"
           rules={[{required: true, message: 'Please input your password!'}]}

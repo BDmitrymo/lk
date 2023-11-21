@@ -1,7 +1,6 @@
 import React from 'react';
 import {Button, Form, Input} from 'antd';
 import {useTranslation} from 'react-i18next';
-import {PersonalData} from '../../ui/PersonalData/PersonalData';
 
 export const SignUpDefaultForm = ({onSetStep}: { onSetStep: (step: string) => void }) => {
   const {t} = useTranslation();

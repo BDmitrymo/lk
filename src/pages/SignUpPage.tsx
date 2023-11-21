@@ -9,7 +9,9 @@ import {SignUpPhoneForm} from '../components/forms/SignUpForms/SignUpPhoneForm';
 import {AuthSocial} from '../components/auth/components/AuthSocial/AuthSocial';
 import {Divider} from '../components/ui/Divider/Divider';
 import {SignUp} from '../components/auth/SignUp';
+import {ReactComponent as Logo} from '../assets/img/logo.svg';
 import '../styles/auth.scss';
+import {Col, Flex, Row} from 'antd';
 
 export const SignUpPage = () => {
   const items = [
@@ -24,10 +26,13 @@ export const SignUpPage = () => {
   ];
 
   return (
-    <div className="as__auth">
-      <div className="as__auth_item as__auth_content">
+    <Flex className="as__auth" gap={30} justify="center" align="center">
+      <div className="gutter-row as__auth_item as__auth_content">
         <SwitchLang/>
         <div className="as__auth_box">
+          <Flex align="center" justify="center">
+            <Logo/>
+          </Flex>
           <Title className="as__auth_title">Регистрация</Title>
           <AuthSocial/>
           <Divider text="или"/>
@@ -37,9 +42,9 @@ export const SignUpPage = () => {
           </Title>
         </div>
       </div>
-      {/*<div className="as__auth_item as__auth_banner">*/}
-      {/*  <CarouselBanner banners={BANNER_1_CONFIG}/>*/}
-      {/*</div>*/}
-    </div>
+      <div className="as__auth_item as__auth_banner">
+        <CarouselBanner banners={BANNER_1_CONFIG}/>
+      </div>
+    </Flex>
   );
 };
