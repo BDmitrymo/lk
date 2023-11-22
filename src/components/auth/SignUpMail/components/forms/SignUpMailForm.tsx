@@ -2,23 +2,20 @@ import React from 'react';
 import {Button, Form, Input} from 'antd';
 import {useTranslation} from 'react-i18next';
 
-export const SignUpDefaultForm = ({onSetStep}: { onSetStep: (step: string) => void }) => {
+export const SignUpMailForm = () => {
   const {t} = useTranslation();
 
   const handleSend = (values: any) => {
     console.log('Success:', values);
-    onSetStep('step2')
   };
 
-  //Подтверждая номер,
-
   return (
-    <Form layout="vertical" autoComplete="off" onFinish={handleSend}>
+    <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
       <Form.Item
         className="as__auth_form-item"
         label="Как Вас зовут"
         name="username"
-        rules={[{required: true, message: 'Please input your username!'}]}
+        rules={[{required: true, message: 'Введите имя'}]}
       >
         <Input size="large" placeholder="Введите имя"/>
       </Form.Item>
@@ -26,7 +23,7 @@ export const SignUpDefaultForm = ({onSetStep}: { onSetStep: (step: string) => vo
         className="as__auth_form-item"
         label="Введите Ваш email"
         name="email"
-        rules={[{required: true, type: 'email', message: 'Please input your password!'}]}
+        rules={[{required: true, type: 'email', message: 'Введите почту'}]}
       >
         <Input size="large" placeholder="Email"/>
       </Form.Item>

@@ -4,24 +4,23 @@ import Title from 'antd/es/typography/Title';
 import {Link} from 'react-router-dom';
 import {Flex} from 'antd';
 import {SwitchLang} from '../components/ui/SwitchLang/SwitchLang';
-import {CarouselBanner} from '../components/ui/CarouselBanner/CarouselBanner';
-import {TabsAuth} from '../components/auth/components/TabsAuth/TabsAuth';
-import {SignUpPhoneForm} from '../components/forms/SignUpForms/SignUpPhoneForm';
-import {AuthSocial} from '../components/auth/components/AuthSocial/AuthSocial';
+import {TabsAuth} from '../components/auth/common/TabsAuth/TabsAuth';
+import {AuthSocial} from '../components/auth/common/AuthSocial/AuthSocial';
 import {Divider} from '../components/ui/Divider/Divider';
-import {SignUp} from '../components/auth/SignUp';
+import {SignUpMail} from '../components/auth/SignUpMail/SignUpMail';
 import {ReactComponent as Logo} from '../assets/img/logo.svg';
+import {SignUpTel} from '../components/auth/SignUpTel/SignUpTel';
 import '../styles/auth.scss';
 
 export const SignUpPage = () => {
   const items = [
     {
       value: 'Почта',
-      children: <SignUp/>
+      children: <SignUpMail/>
     },
     {
       value: 'Телефон',
-      children: <SignUpPhoneForm/>
+      children: <SignUpTel/>
     }
   ];
 
@@ -36,15 +35,15 @@ export const SignUpPage = () => {
           <Title className="as__auth_title">Регистрация</Title>
           <AuthSocial/>
           <Divider text="или"/>
-          <TabsAuth defaultActiveTab="Почта" items={items}/>
+          <TabsAuth defaultActiveTab="Телефон" items={items}/>
           <Title level={5}>
             У Вас есть аккаунт? <Link to="/login">Войти</Link>
           </Title>
         </div>
       </div>
-      <div className="as__auth_item as__auth_banner">
-        <CarouselBanner banners={BANNERS_AUTH}/>
-      </div>
+      {/*<div className="as__auth_item as__auth_banner">*/}
+      {/*  <CarouselBanner banners={BANNERS_AUTH}/>*/}
+      {/*</div>*/}
     </Flex>
   );
 };

@@ -1,11 +1,15 @@
 import React from 'react';
 import {Button, Form, Input} from 'antd';
-import {PersonalData} from '../../ui/PersonalData/PersonalData';
+import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 
 export const SignUpPasswordForm = () => {
+  const handleSend = (values: any) => {
+    console.log('Success:', values);
+  };
+
   return (
     <>
-      <Form layout="vertical">
+      <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
         <Form.Item
           className="as__auth_form-item"
           label="Задайте пароль"
