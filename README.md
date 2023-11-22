@@ -13,3 +13,6 @@ https://dribbble.com/session/new
 
 ## I18n
 https://react.i18next.com/getting-started
+
+## fontawesome.com
+https://fontawesome.com/icons

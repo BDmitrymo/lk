@@ -5,7 +5,6 @@ import {PersonalData} from '../../ui/PersonalData/PersonalData';
 export const SignUpPasswordForm = () => {
   return (
     <>
-
       <Form layout="vertical">
         <Form.Item
           className="as__auth_form-item"
