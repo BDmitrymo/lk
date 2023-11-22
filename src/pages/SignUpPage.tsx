@@ -1,7 +1,8 @@
 import React from 'react';
-import {BANNER_1_CONFIG} from '../configs/banners-1.config';
+import {BANNERS_AUTH} from '../configs/banners-auth.config';
 import Title from 'antd/es/typography/Title';
 import {Link} from 'react-router-dom';
+import {Flex} from 'antd';
 import {SwitchLang} from '../components/ui/SwitchLang/SwitchLang';
 import {CarouselBanner} from '../components/ui/CarouselBanner/CarouselBanner';
 import {TabsAuth} from '../components/auth/components/TabsAuth/TabsAuth';
@@ -11,7 +12,6 @@ import {Divider} from '../components/ui/Divider/Divider';
 import {SignUp} from '../components/auth/SignUp';
 import {ReactComponent as Logo} from '../assets/img/logo.svg';
 import '../styles/auth.scss';
-import {Col, Flex, Row} from 'antd';
 
 export const SignUpPage = () => {
   const items = [
@@ -43,7 +43,7 @@ export const SignUpPage = () => {
         </div>
       </div>
       <div className="as__auth_item as__auth_banner">
-        <CarouselBanner banners={BANNER_1_CONFIG}/>
+        <CarouselBanner banners={BANNERS_AUTH}/>
       </div>
     </Flex>
   );
