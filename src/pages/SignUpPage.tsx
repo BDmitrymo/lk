@@ -10,6 +10,7 @@ import {Divider} from '../components/ui/Divider/Divider';
 import {SignUpMail} from '../components/auth/SignUpMail/SignUpMail';
 import {ReactComponent as Logo} from '../assets/img/logo.svg';
 import {SignUpTel} from '../components/auth/SignUpTel/SignUpTel';
+import {CarouselBanner} from '../components/ui/CarouselBanner/CarouselBanner';
 import '../styles/auth.scss';
 
 export const SignUpPage = () => {
@@ -41,9 +42,9 @@ export const SignUpPage = () => {
           </Title>
         </div>
       </div>
-      {/*<div className="as__auth_item as__auth_banner">*/}
-      {/*  <CarouselBanner banners={BANNERS_AUTH}/>*/}
-      {/*</div>*/}
+      <div className="as__auth_item as__auth_banner">
+        <CarouselBanner banners={BANNERS_AUTH}/>
+      </div>
     </Flex>
   );
 };
