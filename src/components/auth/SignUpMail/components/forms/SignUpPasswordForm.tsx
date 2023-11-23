@@ -11,28 +11,44 @@ export const SignUpPasswordForm = () => {
 
   return (
     <Spin spinning={loading} delay={500}>
-    <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
-      <Form.Item
-        className="as__auth_form-item"
-        label="Задайте пароль"
-        name="password"
-        rules={[{required: true, message: 'Введите пароль'}]}
-      >
-        <Input.Password size="large" placeholder="Введите пароль"/>
-      </Form.Item>
-      <Form.Item
-        className="as__auth_form-item"
-        label="Повторите пароль"
-        name="repeatPassword"
-        rules={[{required: true, message: 'Введите пароль'}]}
-      >
-        <Input.Password size="large" placeholder="Повторите пароль"/>
-      </Form.Item>
-      <PersonalData text="Нажимая кнопку 'Завершить регистрацию'"/>
-      <Button size="large" type="primary" htmlType="submit" block>
-        Завершить регистрацию
-      </Button>
-    </Form>
+      <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
+        <Form.Item
+          className="as__auth_form-item"
+          label="Задайте пароль"
+          name="password"
+          rules={[{required: true, message: 'Введите пароль'}]}
+        >
+          <Input.Password size="large" placeholder="Введите пароль"/>
+        </Form.Item>
+        <Form.Item
+          className="as__auth_form-item"
+          label="Повторите пароль"
+          name="repeatPassword"
+          dependencies={['password']}
+          rules={[
+            {required: true},
+            ({getFieldValue}) => ({
+              validator(_, value) {
+                if (getFieldValue('password') !== value) {
+                  return Promise.reject(new Error('Не совпадает пароли'));
+                }
+
+                if (value.length < 8) {
+                  return Promise.reject(new Error('Длина должна от 8'));
+                }
+
+                return Promise.resolve();
+              }
+            })
+          ]}
+        >
+          <Input.Password size="large" placeholder="Повторите пароль"/>
+        </Form.Item>
+        <PersonalData text="Нажимая кнопку 'Завершить регистрацию'"/>
+        <Button size="large" type="primary" htmlType="submit" block>
+          Завершить регистрацию
+        </Button>
+      </Form>
     </Spin>
   );
 };
