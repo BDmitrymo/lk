@@ -1,25 +1,21 @@
 import React, {useState} from 'react';
-import {Button, Flex, Form, Input, Spin, Typography} from 'antd';
+import {Flex, Form, Input, Spin, Typography} from 'antd';
 import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 import Title from 'antd/es/typography/Title';
 import Paragraph from 'antd/es/typography/Paragraph';
-import Search from 'antd/es/input/Search';
+import {REG_EXP} from '../../../../../configs/regExp.config';
 
 const {Text} = Typography;
 
 export const SignUpCodeForm = () => {
-  const [loading, setLoad] = useState(false)
-  const [disabled, setDisabled] = useState(false)
+  const [loading, setLoad] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const handlerCode = ({target}: any) => {
     if (target.value.length === 4) {
-      setLoad(true)
-      setDisabled(true)
+      setLoad(true);
+      setDisabled(true);
     }
-  };
-
-  const handlerFormatNumber = ({target}: any) => {
-    return target.value.replace(/\D/g, '');
   };
 
   return (
@@ -32,7 +28,13 @@ export const SignUpCodeForm = () => {
       </Paragraph>
       <Spin spinning={loading} delay={500}>
         <Form layout="vertical" autoComplete="off">
-          <Form.Item className="as__auth_form-item" name="code" getValueFromEvent={handlerFormatNumber}>
+          <Form.Item
+            className="as__auth_form-item"
+            name="code"
+            getValueFromEvent={
+              ({target}: React.ChangeEvent<HTMLInputElement>) => target.value.replace(REG_EXP.number, '')
+            }
+          >
             <Input
               disabled={disabled}
               size="large"
