@@ -1,5 +1,4 @@
 import React from 'react';
-import {BANNERS_AUTH} from '../configs/banners-auth.config';
 import Title from 'antd/es/typography/Title';
 import {Link} from 'react-router-dom';
 import {Flex} from 'antd';
@@ -10,7 +9,6 @@ import {Divider} from '../components/ui/Divider/Divider';
 import {SignUpMail} from '../components/auth/SignUpMail/SignUpMail';
 import {ReactComponent as Logo} from '../assets/img/logo.svg';
 import {SignUpTel} from '../components/auth/SignUpTel/SignUpTel';
-import {CarouselBanner} from '../components/ui/CarouselBanner/CarouselBanner';
 import '../styles/auth.scss';
 
 export const SignUpPage = () => {
@@ -29,21 +27,16 @@ export const SignUpPage = () => {
     <Flex className="as__auth" gap={30} justify="center" align="center">
       <div className="gutter-row as__auth_item as__auth_content">
         <SwitchLang/>
-        <div className="as__auth_box">
-          <Flex align="center" justify="center">
-            <Logo/>
-          </Flex>
+        <Flex align="center" justify="center" vertical>
+          <Logo/>
           <Title className="as__auth_title">Регистрация</Title>
           <AuthSocial/>
           <Divider text="или"/>
-          <TabsAuth defaultActiveTab="Телефон" items={items}/>
+          <TabsAuth defaultActiveTab="Почта" items={items}/>
           <Title level={5}>
             У Вас есть аккаунт? <Link to="/login">Войти</Link>
           </Title>
-        </div>
-      </div>
-      <div className="as__auth_item as__auth_banner">
-        <CarouselBanner banners={BANNERS_AUTH}/>
+        </Flex>
       </div>
     </Flex>
   );

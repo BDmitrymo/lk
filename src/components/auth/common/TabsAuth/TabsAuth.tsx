@@ -1,5 +1,5 @@
 import React, {ReactNode, useEffect, useState} from 'react';
-import {Segmented} from 'antd';
+import {Flex, Segmented} from 'antd';
 import './TabsAuth.scss';
 
 export interface ITabsItem {
@@ -20,7 +20,7 @@ export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
 
   const findTab = (value: TSegmented) => {
     return items.find(i => i.value === value);
-  }
+  };
 
   useEffect(() => {
     const tab = findTab(defaultActiveTab);
@@ -33,7 +33,7 @@ export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
   }, []);
 
   const handlerChangeActiveTab = (value: TSegmented) => {
-    const tab = findTab(value)
+    const tab = findTab(value);
 
     if (tab) {
       setActiveTab(tab);
@@ -42,11 +42,9 @@ export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
 
   return (
     <div className="as__auth_tabs">
-      <div className="as__auth_tabs-nav">
-        <div className="as__auth_tabs-nav-wrap">
-          <Segmented size="large" options={options} value={activeTab?.value} onChange={handlerChangeActiveTab}/>
-        </div>
-      </div>
+      <Flex align="center" vertical>
+        <Segmented size="large" options={options} value={activeTab?.value} onChange={handlerChangeActiveTab}/>
+      </Flex>
       <div className="as__auth_tabs-content">
         {activeTab?.children}
       </div>

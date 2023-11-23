@@ -1,30 +1,49 @@
-import React from 'react';
-import {Button, Col, Flex, Form, Input, Row, Select, Typography} from 'antd';
+import React, {useState} from 'react';
+import {Button, Flex, Form, Input, Spin, Typography} from 'antd';
 import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 import Title from 'antd/es/typography/Title';
-
+import Paragraph from 'antd/es/typography/Paragraph';
+import Search from 'antd/es/input/Search';
 
 const {Text} = Typography;
+
 export const SignUpCodeForm = () => {
-  const handleSend = (values: any) => {
-    console.log('Success:', values);
+  const [loading, setLoad] = useState(false)
+  const [disabled, setDisabled] = useState(false)
+
+  const handlerCode = ({target}: any) => {
+    if (target.value.length === 4) {
+      setLoad(true)
+      setDisabled(true)
+    }
   };
 
-  const handlerChangeCodeTel = () => {
-
+  const handlerFormatNumber = ({target}: any) => {
+    return target.value.replace(/\D/g, '');
   };
 
   return (
     <div className="as__auth_form-code">
-      <Title level={3}>Введите код</Title>
-      <Text type="secondary">Отправили код для подтферждения на номер #НОМЕР</Text>
-      <Form layout="vertical" autoComplete="off" onFinish={handleSend} requiredMark={false}>
-        <Form.Item className="as__auth_form-item" name="code">
-          <Input size="large" placeholder="Введите имя"/>
-        </Form.Item>
-      </Form>
+      <Paragraph>
+        <Flex align="center" vertical>
+          <Title level={3}>Введите код</Title>
+          <Text type="secondary">Отправили код для подтферждения на номер #НОМЕР</Text>
+        </Flex>
+      </Paragraph>
+      <Spin spinning={loading} delay={500}>
+        <Form layout="vertical" autoComplete="off">
+          <Form.Item className="as__auth_form-item" name="code" getValueFromEvent={handlerFormatNumber}>
+            <Input
+              disabled={disabled}
+              size="large"
+              placeholder="Код"
+              style={{textAlign: 'center'}}
+              onChange={handlerCode}
+            />
+          </Form.Item>
+        </Form>
+      </Spin>
       <PersonalData text="Подтверждая номер"/>
     </div>
-
   );
 };

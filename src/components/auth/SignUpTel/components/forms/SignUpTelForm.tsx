@@ -1,13 +1,10 @@
 import React from 'react';
 import {Button, Flex, Form, Input, Select} from 'antd';
 
-export const SignUpTelForm = () => {
+export const SignUpTelForm = ({onSetStep}: { onSetStep: (step: number) => void }) => {
   const handleSend = (values: any) => {
+    onSetStep(2);
     console.log('Success:', values);
-  };
-
-  const handlerChangeCodeTel = () => {
-
   };
 
   return (
@@ -29,7 +26,6 @@ export const SignUpTelForm = () => {
         <Flex gap={10}>
           <Select
             defaultValue="+7"
-            onChange={handlerChangeCodeTel}
             options={[
               {value: '+7', label: '+7'},
               {value: '+375', label: '+375'},

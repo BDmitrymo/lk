@@ -2,11 +2,12 @@ import React from 'react';
 import {Button, Form, Input} from 'antd';
 import {useTranslation} from 'react-i18next';
 
-export const SignUpMailForm = () => {
+export const SignUpMailForm = ({onSetStep}: { onSetStep: (step: number) => void }) => {
   const {t} = useTranslation();
 
   const handleSend = (values: any) => {
     console.log('Success:', values);
+    onSetStep(2);
   };
 
   return (
