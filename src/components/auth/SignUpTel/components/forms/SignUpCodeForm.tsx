@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {Flex, Form, Input, Spin, Typography} from 'antd';
-import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 import Title from 'antd/es/typography/Title';
 import Paragraph from 'antd/es/typography/Paragraph';
 import {REG_EXP} from '../../../../../configs/regExp.config';
+import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 
 const {Text} = Typography;
 
@@ -29,7 +29,6 @@ export const SignUpCodeForm = () => {
       <Spin spinning={loading} delay={500}>
         <Form layout="vertical" autoComplete="off">
           <Form.Item
-            className="as__auth_form-item"
             name="code"
             getValueFromEvent={
               ({target}: React.ChangeEvent<HTMLInputElement>) => target.value.replace(REG_EXP.number, '')

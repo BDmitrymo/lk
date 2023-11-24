@@ -3,18 +3,11 @@
   padding: 30px;
   margin: 0;
 
-  &_content {
+  .as__auth_content {
     position: relative;
-    max-width: 500px;
-    width: 100%;
-
-    .as__auth_form-item {
-      margin-bottom: 15px;
-    }
-  }
-
-  &_banner {
-    width: 600px;
+    width: 500px;
+    height: 100%;
+    overflow: auto;
   }
 
   .as__switch-lang {

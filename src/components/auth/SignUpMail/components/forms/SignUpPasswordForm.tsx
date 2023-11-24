@@ -3,9 +3,9 @@ import {Button, Form, Input, Spin} from 'antd';
 import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
 
 export const SignUpPasswordForm = () => {
-  const [loading, setLoad] = useState(false)
+  const [loading, setLoad] = useState(false);
   const handleSend = (values: any) => {
-    setLoad(true)
+    setLoad(true);
     console.log('Success:', values);
   };
 
@@ -13,7 +13,6 @@ export const SignUpPasswordForm = () => {
     <Spin spinning={loading} delay={500}>
       <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
         <Form.Item
-          className="as__auth_form-item"
           label="Задайте пароль"
           name="password"
           rules={[{required: true, message: 'Введите пароль'}]}
@@ -21,7 +20,6 @@ export const SignUpPasswordForm = () => {
           <Input.Password size="large" placeholder="Введите пароль"/>
         </Form.Item>
         <Form.Item
-          className="as__auth_form-item"
           label="Повторите пароль"
           name="repeatPassword"
           dependencies={['password']}

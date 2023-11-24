@@ -13,7 +13,6 @@ export const SignUpMailForm = ({onSetStep}: { onSetStep: (step: number) => void 
   return (
     <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
       <Form.Item
-        className="as__auth_form-item"
         label="Как Вас зовут"
         name="username"
         rules={[{required: true, message: 'Введите имя'}]}
@@ -21,12 +20,11 @@ export const SignUpMailForm = ({onSetStep}: { onSetStep: (step: number) => void 
         <Input size="large" placeholder="Введите имя"/>
       </Form.Item>
       <Form.Item
-        className="as__auth_form-item"
-        label="Введите Ваш email"
+        label="Введите Вашу почту"
         name="email"
         rules={[{required: true, type: 'email', message: 'Введите почту'}]}
       >
-        <Input size="large" placeholder="Email"/>
+        <Input size="large" placeholder="Почта"/>
       </Form.Item>
       <Button size="large" type="primary" htmlType="submit" block>
         {t('common.further')}

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Flex, Form, Input, Select} from 'antd';
+import {REG_EXP} from '../../../../../configs/regExp.config';
 
 export const SignUpTelForm = ({onSetStep}: { onSetStep: (step: number) => void }) => {
   const handleSend = (values: any) => {
@@ -10,7 +11,6 @@ export const SignUpTelForm = ({onSetStep}: { onSetStep: (step: number) => void }
   return (
     <Form layout="vertical" autoComplete="off" onFinish={handleSend} requiredMark={false}>
       <Form.Item
-        className="as__auth_form-item"
         label="Как Вас зовут"
         name="username"
         rules={[{required: true, message: 'Введите имя'}]}
@@ -19,9 +19,11 @@ export const SignUpTelForm = ({onSetStep}: { onSetStep: (step: number) => void }
       </Form.Item>
       <Form.Item
         label="Введите Ваш телефон"
-        className="as__auth_form-item"
-        name="phone"
+        name="tel"
         rules={[{required: true, message: 'Введите номер телефона'}]}
+        getValueFromEvent={
+          ({target}: React.ChangeEvent<HTMLInputElement>) => target.value.replace(REG_EXP.number, '')
+        }
       >
         <Flex gap={10}>
           <Select

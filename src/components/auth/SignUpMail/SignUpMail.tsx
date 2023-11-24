@@ -4,7 +4,7 @@ import {SignUpPasswordForm} from './components/forms/SignUpPasswordForm';
 import {Button} from 'antd';
 
 export const SignUpMail = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
 
   const handlerSetStep = (step: number) => {
     setStep(step);

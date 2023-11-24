@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Flex} from 'antd';
+import {Button} from 'antd';
 import {SignUpTelForm} from './components/forms/SignUpTelForm';
 import {SignUpCodeForm} from './components/forms/SignUpCodeForm';
 

@@ -1,8 +1,7 @@
 import React, {ReactNode, useEffect, useState} from 'react';
 import {Flex, Segmented} from 'antd';
-import './TabsAuth.scss';
 
-export interface ITabsItem {
+interface ITabsItem {
   value: string;
   children: ReactNode;
 }
@@ -41,9 +40,15 @@ export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
   };
 
   return (
-    <div className="as__auth_tabs">
-      <Flex align="center" vertical>
-        <Segmented size="large" options={options} value={activeTab?.value} onChange={handlerChangeActiveTab}/>
+    <div className="as__auth_tabs" style={{width: '100%'}}>
+      <Flex justify="center">
+        <Segmented
+          size="large"
+          options={options}
+          value={activeTab?.value}
+          onChange={handlerChangeActiveTab} style={{width: '300px'}}
+          block
+        />
       </Flex>
       <div className="as__auth_tabs-content">
         {activeTab?.children}
