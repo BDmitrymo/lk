@@ -1,0 +1,12 @@
+.as__admin-layout {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 50px 1fr;
+  height: 100vh;
+
+  .as__admin-layout_body {
+    background: #f6f8fa;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}

@@ -11,6 +11,11 @@ https://dribbble.com/shots/22583771-Login-Registration \
 https://dashboard.callshark.ru/registration?lang=ru \
 https://dribbble.com/session/new
 
+## Дизайн админки
+https://dribbble.com/shots/21547168-Project-Management-Dashboard \
+https://dribbble.com/shots/18887545-Project-Management-Dashboard-UI-Concept \
+https://dribbble.com/shots/21478246-Omoi-Customer-Relationship-Management-Dashboard \
+
 ## I18n
 https://react.i18next.com/getting-started
 
