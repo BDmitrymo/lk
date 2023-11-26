@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Flex, Form, Input, Select} from 'antd';
-import {REG_EXP} from '../../../../../configs/regExp.config';
+import {REG_EXP} from '../../../../../../configs/regExp.config';
 
 export const SignUpTelForm = ({onSetStep}: { onSetStep: (step: number) => void }) => {
   const handleSend = (values: any) => {

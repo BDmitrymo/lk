@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, Input, Spin} from 'antd';
-import {PersonalData} from '../../../../ui/PersonalData/PersonalData';
+import {PersonalData} from '../../../../../ui/PersonalData/PersonalData';
 
 export const SignUpPasswordForm = () => {
   const [loading, setLoad] = useState(false);

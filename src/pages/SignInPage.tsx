@@ -1,24 +1,23 @@
-import React from 'react';
+import React from 'react'
+import {Divider, Flex} from 'antd';
 import Title from 'antd/es/typography/Title';
 import {Link} from 'react-router-dom';
-import {Divider, Flex} from 'antd';
 import {SwitchLang} from '../components/ui/SwitchLang/SwitchLang';
-import {TabsAuth} from '../components/auth/common/TabsAuth';
 import {AuthSocial} from '../components/auth/common/AuthSocial';
-import {SignUpMail} from '../components/auth/SignUp/SignUpMail/SignUpMail';
-import {SignUpTel} from '../components/auth/SignUp/SignUpTel/SignUpTel';
+import {TabsAuth} from '../components/auth/common/TabsAuth';
+import {SignInTelForm} from '../components/auth/SignIn/SignInTelForm';
+import {SignInMailForm} from '../components/auth/SignIn/SignInMailForm';
 import {ReactComponent as Logo} from '../assets/img/logo.svg';
-import '../styles/auth.scss';
 
-export const SignUpPage = () => {
+export const SignInPage = () => {
   const items = [
     {
-      value: 'Почта',
-      children: <SignUpMail/>
+      value: 'Телефон',
+      children: <SignInTelForm/>
     },
     {
-      value: 'Телефон',
-      children: <SignUpTel/>
+      value: 'Почта',
+      children: <SignInMailForm/>
     }
   ];
 
@@ -28,15 +27,15 @@ export const SignUpPage = () => {
         <SwitchLang/>
         <Flex justify="center" align="center" style={{minHeight: '100%'}} vertical>
           <Logo/>
-          <Title className="as__auth_title">Регистрация</Title>
+          <Title className="as__auth_title">Авторизация</Title>
           <AuthSocial/>
           <Divider>или</Divider>
-          <TabsAuth defaultActiveTab="Почта" items={items}/>
+          <TabsAuth defaultActiveTab="Телефон" items={items}/>
           <Title level={5}>
-            У Вас есть аккаунт? <Link to="/signin">Войти</Link>
+            У Вас нет аккаунт? <Link to="/signup">Регистрация</Link>
           </Title>
         </Flex>
       </div>
     </Flex>
   );
-};
+}

@@ -4,7 +4,7 @@ import {THEME_LIGHT} from './configs/themeLight.config';
 import {Route, Routes} from 'react-router-dom';
 import {initI18n} from './modules/i18n/i18n';
 import {SignUpPage} from './pages/SignUpPage';
-import {SignIn} from './pages/SignIn';
+import {SignInPage} from './pages/SignInPage';
 import './App.scss';
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<SignUpPage/>}></Route>
-          <Route path="/signin" element={<SignIn/>}></Route>
+          <Route path="/signin" element={<SignInPage/>}></Route>
           <Route path="/signup" element={<SignUpPage/>}></Route>
         </Routes>
       </div>
