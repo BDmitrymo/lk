@@ -4,7 +4,6 @@
     "module": "esnext",
     "jsx": "react",
     "esModuleInterop": true,
-    "baseUrl": "./src",
     "skipLibCheck": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
@@ -16,6 +15,30 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "sourceMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/ui/*": [
+        "components/ui"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ],
+      "@/services/*": [
+        "services/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/assets/*": [
+        "assets/*"
+      ]
+    },
     "lib": [
       "dom",
       "dom.iterable",

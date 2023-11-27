@@ -1,0 +1,17 @@
+{
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@/components/(.*)$",
+    "^@/ui/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/services/(.*)$",
+    "^@/assets/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/config/(.*)$",
+    "^../(.*)",
+    "^./(.*)",
+    "(.scss)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
