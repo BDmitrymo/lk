@@ -1,21 +1,55 @@
 .as__admin-menu {
   grid-column: 1/2;
   grid-row: 1/3;
-  border-right: 1px solid #0505050f;
+  box-shadow: 0 3.69445px 18.47226px 0 rgba(0, 0, 0, 0.05);
 
   .as__logo {
-    width: 45px;
-    height: 45px;
+    width: 100%;
+    height: 35px;
+    margin: 8px 0;
   }
 
-  .as__admin-menu_top {
-    .as__admin-menu_button {
-      background: none;
-      color: #adb3bb;
-      cursor: pointer;
-      width: 100%;
-      padding: 15px 0;
-      border: none;
+  .as__admin-menu_box {
+    margin-top: 50px;
+  }
+
+  .as__admin-menu_button {
+    position: relative;
+    background: none;
+    color: #adb3bb;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    font-size: 18px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 49px;
+      background: #47afff;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: none;
+    }
+
+    &:hover:before {
+      display: block;
+    }
+
+    &:hover {
+      color: #47afff;
+    }
+  }
+
+  .as__admin-menu_button-active {
+    color: #47afff;
+
+    &:before {
+      display: block;
     }
   }
 }

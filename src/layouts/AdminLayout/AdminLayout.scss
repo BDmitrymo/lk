@@ -1,12 +1,21 @@
 .as__admin-layout {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 60px 1fr;
   grid-template-rows: 50px 1fr;
+  gap: 15px 15px;
   height: 100vh;
 
   .as__admin-layout_body {
     background: #f6f8fa;
     grid-column: 2/3;
     grid-row: 2/3;
+    padding: 0 15px 15px 0;
+
+    .as__admin-layout_container {
+      border-radius: 10px;
+      background: #fff;
+      height: 100%;
+      box-shadow: 0 4.61807px 18.47226px 0 rgba(0, 0, 0, 0.05);
+    }
   }
 }

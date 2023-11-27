@@ -1,10 +1,12 @@
 import React from 'react';
-import './HeaderAdmin.scss'
+import {ProfileUser} from '../../ui/ProfileUser/ProfileUser';
+import {Flex} from 'antd';
+import './HeaderAdmin.scss';
 
 export const HeaderAdmin = () => {
   return (
-    <div className="as__admin-header">
-      Header
-    </div>
+    <Flex className="as__admin-header" style={{height: '100%'}} justify="flex-end" align="center">
+      <ProfileUser/>
+    </Flex>
   );
 };

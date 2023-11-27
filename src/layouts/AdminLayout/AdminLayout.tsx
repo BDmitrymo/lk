@@ -1,15 +1,17 @@
 import React from 'react';
-import './AdminLayout.scss'
 import {MenuAdmin} from '../../components/admin/MenuAdmin/MenuAdmin';
 import {HeaderAdmin} from '../../components/admin/HeaderAdmin/HeaderAdmin';
+import './AdminLayout.scss';
 
-export const AdminLayout = ({children}:any) => {
+export const AdminLayout = ({children}: any) => {
   return (
     <div className="as__admin-layout">
       <HeaderAdmin/>
       <MenuAdmin/>
       <div className="as__admin-layout_body">
-        {children ? children : 'Отсутствует'}
+        <div className="as__admin-layout_container">
+          {children ? children : 'Отсутствует'}
+        </div>
       </div>
     </div>
   );
