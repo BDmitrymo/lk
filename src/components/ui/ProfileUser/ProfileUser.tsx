@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import type {MenuProps} from 'antd';
-import {Avatar, Drawer, Dropdown} from 'antd';
+import {Avatar, Drawer, Dropdown, Flex, Typography} from 'antd';
 import {Link} from 'react-router-dom';
 import './ProfileUser.scss';
+
+const {Text} = Typography;
 
 export const ProfileUser = () => {
   const [openProfile, setOpenProfile] = useState(false);
@@ -30,9 +32,15 @@ export const ProfileUser = () => {
 
   return (
     <>
-      <Dropdown className="as__profile-user" menu={{items}} placement="topRight">
-        <Avatar style={{backgroundColor: '#f56a00', verticalAlign: 'middle'}} size={30} gap={2}/>
-      </Dropdown>
+      <Flex style={{padding: '0 20px'}} align="center">
+        <Dropdown className="as__profile-user" menu={{items}} placement="topLeft">
+          <Avatar style={{backgroundColor: '#f56a00', verticalAlign: 'middle'}} size={30} gap={2}/>
+        </Dropdown>
+        <Flex vertical>
+          <Text style={{fontSize: '14px'}}>Батков</Text>
+          <Text style={{fontSize: '11px'}} type="secondary">Администратор</Text>
+        </Flex>
+      </Flex>
       <Drawer title="Профиль" placement="right" onClose={onClose} open={openProfile}></Drawer>
     </>
   );
