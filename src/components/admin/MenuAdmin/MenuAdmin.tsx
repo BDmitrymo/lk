@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as Logo } from '../../../assets/img/logo.svg'
+import {ReactComponent as Logo} from '../../../assets/img/logo.svg'
 import './MenuAdmin.scss'
 
 export const MenuAdmin = () => {

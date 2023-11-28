@@ -1,5 +1,5 @@
-import React, { ReactNode, useEffect, useState } from 'react'
-import { Flex, Segmented } from 'antd'
+import React, {ReactNode, useEffect, useState} from 'react'
+import {Flex, Segmented} from 'antd'
 
 interface ITabsItem {
   value: string
@@ -13,7 +13,7 @@ interface ITabsAuth {
 
 type TSegmented = string | number
 
-export const TabsAuth = ({ defaultActiveTab, items }: ITabsAuth) => {
+export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
   const [activeTab, setActiveTab] = useState<ITabsItem>()
   const [options, setOptions] = useState<string[]>([])
 
@@ -40,14 +40,14 @@ export const TabsAuth = ({ defaultActiveTab, items }: ITabsAuth) => {
   }
 
   return (
-    <div className="as__auth_tabs" style={{ width: '100%' }}>
+    <div className="as__auth_tabs" style={{width: '100%'}}>
       <Flex justify="center">
         <Segmented
           size="large"
           options={options}
           value={activeTab?.value}
           onChange={handlerChangeActiveTab}
-          style={{ width: '300px' }}
+          style={{width: '300px'}}
           block
         />
       </Flex>

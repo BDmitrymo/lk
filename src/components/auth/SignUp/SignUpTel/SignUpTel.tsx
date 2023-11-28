@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Button } from 'antd'
-import { SignUpTelForm } from './components/forms/SignUpTelForm'
-import { SignUpCodeForm } from './components/forms/SignUpCodeForm'
+import React, {useState} from 'react'
+import {Button} from 'antd'
+import {SignUpTelForm} from './components/forms/SignUpTelForm'
+import {SignUpCodeForm} from './components/forms/SignUpCodeForm'
 
 export const SignUpTel = () => {
   const [step, setStep] = useState(1)

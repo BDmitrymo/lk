@@ -1,10 +1,10 @@
 import React from 'react'
-import { Typography } from 'antd'
+import {Typography} from 'antd'
 import './PersonalData.scss'
 
-const { Text, Link } = Typography
+const {Text, Link} = Typography
 
-export const PersonalData = ({ text }: { text: string }) => {
+export const PersonalData = ({text}: {text: string}) => {
   return (
     <div className="as__personal-data">
       <Text type="secondary">{text}, вы соглашаетесь с </Text>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { SignUpMailForm } from './components/forms/SignUpMailForm'
-import { SignUpPasswordForm } from './components/forms/SignUpPasswordForm'
-import { Button } from 'antd'
+import React, {useState} from 'react'
+import {SignUpMailForm} from './components/forms/SignUpMailForm'
+import {SignUpPasswordForm} from './components/forms/SignUpPasswordForm'
+import {Button} from 'antd'
 
 export const SignUpMail = () => {
   const [step, setStep] = useState(1)
@@ -20,11 +20,7 @@ export const SignUpMail = () => {
           onClick={() => handlerSetStep(1)}
         />
       )}
-      {step === 1 ? (
-        <SignUpMailForm onSetStep={setStep} />
-      ) : (
-        <SignUpPasswordForm />
-      )}
+      {step === 1 ? <SignUpMailForm onSetStep={setStep} /> : <SignUpPasswordForm />}
     </div>
   )
 }

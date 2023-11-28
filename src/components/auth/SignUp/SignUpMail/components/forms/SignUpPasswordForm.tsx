@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Button, Form, Input, Spin } from 'antd'
-import { PersonalData } from '../../../../../ui/PersonalData/PersonalData'
+import React, {useState} from 'react'
+import {Button, Form, Input, Spin} from 'antd'
+import {PersonalData} from '../../../../../ui/PersonalData/PersonalData'
 
 export const SignUpPasswordForm = () => {
   const [loading, setLoad] = useState(false)
@@ -11,16 +11,11 @@ export const SignUpPasswordForm = () => {
 
   return (
     <Spin spinning={loading} delay={500}>
-      <Form
-        layout="vertical"
-        autoComplete="off"
-        requiredMark={false}
-        onFinish={handleSend}
-      >
+      <Form layout="vertical" autoComplete="off" requiredMark={false} onFinish={handleSend}>
         <Form.Item
           label="Задайте пароль"
           name="password"
-          rules={[{ required: true, message: 'Введите пароль' }]}
+          rules={[{required: true, message: 'Введите пароль'}]}
         >
           <Input.Password size="large" placeholder="Введите пароль" />
         </Form.Item>
@@ -29,8 +24,8 @@ export const SignUpPasswordForm = () => {
           name="repeatPassword"
           dependencies={['password']}
           rules={[
-            { required: true },
-            ({ getFieldValue }) => ({
+            {required: true},
+            ({getFieldValue}) => ({
               validator(_, value) {
                 if (getFieldValue('password') !== value) {
                   return Promise.reject(new Error('Не совпадает пароли'))
