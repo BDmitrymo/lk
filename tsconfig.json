@@ -17,8 +17,9 @@
     "sourceMap": true,
     "baseUrl": "./src",
     "paths": {
+      "@/*": ["*"],
       "@/components/*": ["components/*"],
-      "@/ui/*": ["components/ui"],
+      "@/ui/*": ["ui/*"],
       "@/hooks/*": ["hooks/*"],
       "@/config/*": ["config/*"],
       "@/services/*": ["services/*"],

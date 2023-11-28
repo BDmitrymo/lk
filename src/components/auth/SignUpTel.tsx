@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {SignUpMailForm} from './components/forms/SignUpMailForm'
-import {SignUpPasswordForm} from './components/forms/SignUpPasswordForm'
 import {Button} from 'antd'
+import {SignUpCodeForm} from '@/components/auth/forms/SignUpCodeForm'
+import {SignUpTelForm} from '@/components/auth/forms/SignUpTelForm'
 
-export const SignUpMail = () => {
+export const SignUpTel = () => {
   const [step, setStep] = useState(1)
 
   const handlerSetStep = (step: number) => {
@@ -11,7 +11,7 @@ export const SignUpMail = () => {
   }
 
   return (
-    <div className="as__auth_sign-up-mail">
+    <div className="as__auth_sign-up-tel">
       {step === 2 && (
         <Button
           type="primary"
@@ -20,7 +20,7 @@ export const SignUpMail = () => {
           onClick={() => handlerSetStep(1)}
         />
       )}
-      {step === 1 ? <SignUpMailForm onSetStep={setStep} /> : <SignUpPasswordForm />}
+      {step === 1 ? <SignUpTelForm onSetStep={setStep} /> : <SignUpCodeForm />}
     </div>
   )
 }

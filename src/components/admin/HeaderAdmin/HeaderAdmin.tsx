@@ -1,6 +1,6 @@
 import React from 'react'
 import {Flex} from 'antd'
-import {ProfileUser} from '@/components/ui/ProfileUser/ProfileUser'
+import {ProfileUser} from '@/components/admin/ProfileUser/ProfileUser'
 import {SwitchLang} from '@/components/ui/SwitchLang/SwitchLang'
 import './HeaderAdmin.scss'
 

@@ -1,18 +1,18 @@
 .as__auth {
   height: 100vh;
-  padding: 30px;
   margin: 0;
 
   .as__auth_content {
     position: relative;
-    width: 500px;
-    height: 100%;
-    overflow: auto;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .as__switch-lang {
     position: absolute;
-    right: 0;
-    top: 0;
+    top: 20px;
+    right: 20px;
   }
 }

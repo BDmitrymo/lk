@@ -5,11 +5,12 @@ module.exports = function override(config) {
     '@': 'src',
     '@/components': 'src/components',
     '@/ui': 'src/ui',
+    '@/layouts': 'src/layouts',
     '@/hooks': 'src/hooks',
     '@/services': 'src/services',
     '@/assets': 'src/assets',
     '@/utils': 'src/utils',
-    '@/config': 'src/config',
+    '@/configs': 'src/configs',
   })(config)
 
   return config

@@ -3,7 +3,7 @@ import {AdminLayout} from '../layouts/AdminLayout/AdminLayout'
 
 export const AdminPage = () => {
   return (
-    <div className="as__admin">
+    <div className="as__admin-page">
       <AdminLayout>Данные админки</AdminLayout>
     </div>
   )

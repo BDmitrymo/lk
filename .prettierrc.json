@@ -9,12 +9,14 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^@/components/(.*)$",
+    "^@/pages/(.*)$",
+    "^@/layouts/(.*)$",
     "^@/ui/(.*)$",
     "^@/hooks/(.*)$",
     "^@/services/(.*)$",
     "^@/assets/(.*)$",
     "^@/utils/(.*)$",
-    "^@/config/(.*)$",
+    "^@/configs/(.*)$",
     "^../(.*)",
     "^./(.*)",
     "(.scss)"
