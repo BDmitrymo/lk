@@ -1,3 +1,3 @@
 export const REG_EXP: any = {
-  number: /\D/g
-};
+  number: /\D/g,
+}

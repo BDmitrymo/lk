@@ -6,10 +6,10 @@ export const THEME_LIGHT = {
   components: {
     Segmented: {
       itemSelectedBg: '#47afff',
-      itemSelectedColor: '#ffffff'
+      itemSelectedColor: '#ffffff',
     },
     Form: {
-      itemMarginBottom: 15
-    }
+      itemMarginBottom: 15,
+    },
   },
-};
+}
