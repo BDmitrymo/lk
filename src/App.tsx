@@ -9,12 +9,12 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.scss'
 
 export default function App() {
-  initI18n('ru')
+  initI18n('ru') // todo
 
   return (
-    <ConfigProvider theme={THEME_LIGHT}>
+    <ConfigProvider theme={THEME_LIGHT}> {/*// todo*/}
       <div className="App">
-        <Flex className="as__route">
+        <Flex className="as__route"> {/*// todo*/}
           <Radio.Group size="small">
             <Radio.Button value="large">
               <Link to={'/signin'}>Авторизация</Link>
@@ -31,9 +31,9 @@ export default function App() {
         </Flex>
         <Routes>
           {/*<Route path="/" element={<SignUpPage/>}></Route>*/}
-          <Route path="/" element={<AdminPage />}></Route>
+          <Route path="/" element={<AdminPage />}></Route> {/*// todo*/}
           <Route path="/signin" element={<SignInPage />}></Route>
-          <Route path="/signup" element={<SignUpPage />}></Route>
+          <Route path="/signup" element={<SignUpPage/>}/>
           <Route path="/admin" element={<AdminPage />}></Route>
         </Routes>
       </div>
