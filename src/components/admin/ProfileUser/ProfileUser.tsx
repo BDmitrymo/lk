@@ -32,16 +32,18 @@ export const ProfileUser = () => {
 
   return (
     <>
-      <Flex style={{padding: '0 20px'}} align="center">
-        <Dropdown className="as__profile-user" menu={{items}} placement="topLeft">
-          <Avatar style={{backgroundColor: '#f56a00', verticalAlign: 'middle'}} size={30} gap={2} />
+      <Flex className="as__profile-user" align="center">
+        <Dropdown menu={{items}} placement="topLeft">
+          <Avatar className="as__profile-user_avatar" size={40} gap={2} />
         </Dropdown>
-        <Flex vertical>
-          <Text style={{fontSize: '14px'}}>Батков</Text>
-          <Text style={{fontSize: '11px'}} type="secondary">
+        <div className="as__profile-user_info">
+          <div className="as__profile-user_fio" style={{fontSize: '14px'}}>
+            Батков
+          </div>
+          <div className="as__profile-user_role" style={{fontSize: '11px'}}>
             Администратор
-          </Text>
-        </Flex>
+          </div>
+        </div>
       </Flex>
       <Drawer title="Профиль" placement="right" onClose={onClose} open={openProfile}></Drawer>
     </>

@@ -6,12 +6,7 @@ import './HeaderAdmin.scss'
 
 export const HeaderAdmin = () => {
   return (
-    <Flex
-      className="as__admin-header" /*// todo*/
-      style={{height: '100%'}}
-      justify="flex-end"
-      align="center"
-    >
+    <Flex className="as__header-admin" style={{height: '100%'}} justify="flex-end" align="center">
       <SwitchLang />
       <ProfileUser />
     </Flex>

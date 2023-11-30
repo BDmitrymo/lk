@@ -1,19 +1,24 @@
 import React from 'react'
-import {ReactComponent as Logo} from '../../../assets/img/logo.svg'
 import './MenuAdmin.scss'
+import {Button, Flex} from 'antd'
+import {SwitchLang} from '@/components/ui/SwitchLang/SwitchLang'
 
 export const MenuAdmin = () => {
   return (
-    <div className="as__admin-menu">
-      <Logo className="as__logo" />
-      <div className="as__admin-menu_box">
-        <button className="as__admin-menu_button as__admin-menu_button-active">
+    <Flex className="as__menu-admin" justify="space-between" vertical>
+      <div className="as__menu-admin_top">
+        <Button className="as__menu-admin_button as__menu-admin_button-active">
           <i className="fa-solid fa-message" />
-        </button>
-        <button className="as__admin-menu_button">
+        </Button>
+        <Button className="as__menu-admin_button">
           <i className="fa-solid fa-chart-pie" />
-        </button>
+        </Button>
       </div>
-    </div>
+      <div className="as__menu-admin_bottom">
+        <Button className="as__menu-admin_button">
+          <i className="fa-solid fa-gear" />
+        </Button>
+      </div>
+    </Flex>
   )
 }
