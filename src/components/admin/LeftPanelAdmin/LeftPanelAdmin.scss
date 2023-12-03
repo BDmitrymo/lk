@@ -1,0 +1,15 @@
+.as__left-panel-admin {
+  grid-row: 1/3;
+  padding-bottom: 15px;
+  background: #fff;
+
+  .as__left-panel-admin_box-logo {
+    width: 60px;
+    height: 60px;
+
+    .as__logo {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

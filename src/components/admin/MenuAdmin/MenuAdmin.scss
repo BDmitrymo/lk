@@ -1,38 +1,10 @@
 .as__menu-admin {
-  background: #fff;
-  border-radius: 40px;
-  height: 100%;
   padding: 25px 0;
 
   .as__menu-admin_button {
     position: relative;
-    background: none;
     color: #adb3bb;
-    cursor: pointer;
-    width: 100%;
-    padding: 15px 0;
     border: none;
     font-size: 18px;
-  }
-
-  .as__menu-admin_button-active {
-    color: #47afff;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 49px;
-      background: #47afff;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      display: none;
-    }
-
-    &:before {
-      display: block;
-    }
   }
 }

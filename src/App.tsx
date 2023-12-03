@@ -1,6 +1,7 @@
-import {Debug} from '@/components/Debug'
+import {Debug} from '@/components/Debug/Debug'
+import {LIGHT_THEME} from '@/theme'
 import {ConfigProvider} from 'antd'
-import {THEME_LIGHT} from 'configs/themeLight.config'
+
 import {initI18n} from 'modules/i18n/i18n'
 import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
@@ -12,8 +13,8 @@ export default function App() {
   initI18n('ru')
 
   return (
-    <ConfigProvider theme={THEME_LIGHT}>
-      <BrowserRouter basename="">
+    <ConfigProvider theme={LIGHT_THEME}>
+      <BrowserRouter>
         <div className="App">
           <Debug />
           <Router />

@@ -1,6 +1,7 @@
 import {Flex, Radio} from 'antd'
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './Debug.scss'
 
 export const Debug = () => {
   return (
@@ -10,11 +11,9 @@ export const Debug = () => {
           <Link to={'/signin'}>Авторизация</Link>
         </Radio.Button>
         <Radio.Button value="default">
-          {' '}
           <Link to={'/signup'}>Регистрация</Link>
         </Radio.Button>
         <Radio.Button value="small">
-          {' '}
           <Link to={'/admin'}>Админ</Link>
         </Radio.Button>
       </Radio.Group>
