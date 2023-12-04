@@ -2,9 +2,19 @@ import {ChatPage} from '@/pages/ChatPage'
 import {SignInPage} from '@/pages/SignInPage'
 import {SignUpPage} from '@/pages/SignUpPage'
 import {StatisticsPage} from '@/pages/StatisticsPage'
-import React from 'react'
+import React, {FunctionComponent, ReactNode} from 'react'
 
-export const ROUTES_PATH: any = {
+interface IPathItem {
+  path: string
+  component: FunctionComponent
+  icon?: ReactNode
+}
+
+interface IPathRouters {
+  [key: string]: IPathItem[]
+}
+
+export const PATH_ROUTES: IPathRouters = {
   admin: [
     {
       path: '/chat',

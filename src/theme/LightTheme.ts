@@ -1,6 +1,5 @@
 export const LIGHT_THEME = {
   token: {
-    colorBgBase: '#f8f8f8',
     colorPrimary: '#47afff',
     borderRadius: 10,
     motionEaseInOut: '0',

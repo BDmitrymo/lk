@@ -1,10 +1,10 @@
 import {MenuAdmin} from '@/components/admin/MenuAdmin/MenuAdmin'
 import {SwitchLang} from '@/components/ui/SwitchLang'
+import {ReactComponent as Logo} from '../../../assets/img/logo.svg'
 import {SwitchTheme} from '@/components/ui/SwitchTheme/SwitchTheme'
+import './LeftPanelAdmin.scss'
 import {Flex} from 'antd'
 import React from 'react'
-import {ReactComponent as Logo} from '../../../assets/img/logo.svg'
-import './LeftPanelAdmin.scss'
 
 export const LeftPanelAdmin = () => {
   return (
