@@ -1,14 +1,13 @@
-import React from 'react'
-import Title from 'antd/es/typography/Title'
-import {Link} from 'react-router-dom'
-import {Divider, Flex, Typography} from 'antd'
-import {SwitchLang} from '@/components/ui/SwitchLang/SwitchLang'
-import {TabsAuth} from '@/components/auth/common/TabsAuth'
 import {AuthSocial} from '@/components/auth/common/AuthSocial'
+import {TabsAuth} from '@/components/auth/common/TabsAuth'
 import {SignUpMail} from '@/components/auth/SignUpMail'
 import {SignUpTel} from '@/components/auth/SignUpTel'
+import {SwitchLang} from '@/components/ui/SwitchLang'
+import {Divider, Flex, Typography} from 'antd'
+import Title from 'antd/es/typography/Title'
+import React from 'react'
+import {Link} from 'react-router-dom'
 import {ReactComponent as Logo} from '../assets/img/logo.svg'
-import '../styles/auth.scss'
 
 const {Text} = Typography
 

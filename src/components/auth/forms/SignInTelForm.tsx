@@ -1,6 +1,6 @@
-import React from 'react'
+import {REG_EXP} from '@/configs/regExp'
 import {Button, Flex, Form, Input, Select} from 'antd'
-import {REG_EXP} from '@/configs/regExp.config'
+import React from 'react'
 
 export const SignInTelForm = () => {
   return (

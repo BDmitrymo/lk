@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import {Flex, Form, Input, Spin, Typography} from 'antd'
-import Title from 'antd/es/typography/Title'
-import Paragraph from 'antd/es/typography/Paragraph'
-import {REG_EXP} from '../../../configs/regExp.config'
 import {PersonalData} from '@/components/auth/common/PersonalData/PersonalData'
+import {Flex, Form, Input, Spin, Typography} from 'antd'
+import Paragraph from 'antd/es/typography/Paragraph'
+import Title from 'antd/es/typography/Title'
+import {REG_EXP} from 'configs/regExp'
+import React, {useState} from 'react'
 
 const {Text} = Typography
 

@@ -1,5 +1,5 @@
 import {MenuAdmin} from '@/components/admin/MenuAdmin/MenuAdmin'
-import {ProfileUserAdmin} from '@/components/admin/ProfileUserAdmin/ProfileUserAdmin'
+import {SwitchLang} from '@/components/ui/SwitchLang'
 import {SwitchTheme} from '@/components/ui/SwitchTheme/SwitchTheme'
 import {Flex} from 'antd'
 import React from 'react'
@@ -14,7 +14,7 @@ export const LeftPanelAdmin = () => {
       </Flex>
       <MenuAdmin />
       <Flex gap={10} justify="center" vertical>
-        <ProfileUserAdmin />
+        <SwitchLang />
         <SwitchTheme />
       </Flex>
     </Flex>

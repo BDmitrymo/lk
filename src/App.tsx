@@ -1,4 +1,5 @@
 import {Debug} from '@/components/Debug/Debug'
+import {AppRoutes} from '@/components/routes'
 import {LIGHT_THEME} from '@/theme'
 import {ConfigProvider} from 'antd'
 
@@ -7,7 +8,6 @@ import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
 
 import './App.scss'
-import {Router} from './components/Router'
 
 export default function App() {
   initI18n('ru')
@@ -17,7 +17,7 @@ export default function App() {
       <BrowserRouter>
         <div className="App">
           <Debug />
-          <Router />
+          <AppRoutes />
         </div>
       </BrowserRouter>
     </ConfigProvider>

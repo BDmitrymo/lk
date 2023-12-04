@@ -1,10 +1,12 @@
 .as__menu-admin {
   padding: 25px 0;
 
-  .as__menu-admin_button {
-    position: relative;
-    color: #adb3bb;
-    border: none;
-    font-size: 18px;
+  .as__menu-admin_link {
+    font-size: 20px;
+    color: #9a9a9a;
+
+    &.as__menu-admin_link-active {
+      color: #47afff;
+    }
   }
 }

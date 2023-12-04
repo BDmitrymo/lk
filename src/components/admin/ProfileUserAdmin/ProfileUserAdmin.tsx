@@ -1,17 +1,11 @@
 import type {MenuProps} from 'antd'
-import {Avatar, Drawer, Dropdown, Typography} from 'antd'
+import {Avatar, Drawer, Dropdown, Flex} from 'antd'
 import 'components/admin/ProfileUserAdmin/ProfileUserAdmin.scss'
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
-const {Text} = Typography
-
 export const ProfileUserAdmin = () => {
   const [openProfile, setOpenProfile] = useState(false)
-
-  const handlerOpenProfile = () => {
-    setOpenProfile(true)
-  }
 
   const onClose = () => {
     setOpenProfile(false)
@@ -31,16 +25,19 @@ export const ProfileUserAdmin = () => {
   ]
 
   return (
-    <>
-      <Dropdown menu={{items}} placement="topLeft">
-        <Avatar
-          src="https://get.wallhere.com/photo/drawing-illustration-cartoon-panda-ART-bear-mammal-sketch-polar-bear-giant-panda-muzzle-554706.jpg"
-          className="as__profile-user_avatar"
-          size={40}
-          gap={2}
-        />
-      </Dropdown>
+    <Flex className="as__profile-user-admin">
+      <Flex gap={5} align="center">
+        <div className="as__profile-user-admin_info-name">Дмитрий</div>
+        <Dropdown menu={{items}} placement="topLeft">
+          <Avatar
+            src="https://i.pinimg.com/originals/8e/9e/1b/8e9e1b162e3adbc9e5f12ff5b1067a84.jpg"
+            className="as__profile-user_avatar"
+            size={40}
+            gap={2}
+          />
+        </Dropdown>
+      </Flex>
       <Drawer title="Профиль" placement="right" onClose={onClose} open={openProfile}></Drawer>
-    </>
+    </Flex>
   )
 }
