@@ -2,7 +2,7 @@ import {REG_EXP} from '@/configs/regExp'
 import {Button, Flex, Form, Input, Select} from 'antd'
 import React from 'react'
 
-export const SignInTelForm = () => {
+export const SignInTelForm: React.FC = () => {
   return (
     <Form layout="vertical" autoComplete="off" requiredMark={false}>
       <Form.Item

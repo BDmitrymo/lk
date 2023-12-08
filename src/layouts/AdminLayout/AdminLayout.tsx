@@ -5,7 +5,7 @@ import React from 'react'
 import {Outlet} from 'react-router-dom'
 import './AdminLayout.scss'
 
-export const AdminLayout = () => {
+export const AdminLayout: React.FC = () => {
   return (
     <div className="as__admin-layout">
       <HeaderAdmin />

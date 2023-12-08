@@ -1,9 +1,11 @@
 .as__menu-admin {
-  padding: 25px 0;
-
   .as__menu-admin_link {
     font-size: 20px;
     color: #9a9a9a;
+
+    .as__menu-admin_name {
+      display: none;
+    }
 
     &.as__menu-admin_link-active {
       color: #47afff;

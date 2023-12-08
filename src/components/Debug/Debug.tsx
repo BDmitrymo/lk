@@ -3,7 +3,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './Debug.scss'
 
-export const Debug = () => {
+export const Debug: React.FC = () => {
   return (
     <Flex className="as__debug">
       <Radio.Group size="small">

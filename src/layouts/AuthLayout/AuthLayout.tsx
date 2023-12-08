@@ -1,11 +1,11 @@
+import {SwitchLang} from '@/components/ui/SwitchLang'
+import {Flex} from 'antd'
 import React from 'react'
 import {Outlet} from 'react-router-dom'
 import './AuthLayout.scss'
-import {SwitchLang} from '@/components/ui/SwitchLang'
-import {Flex} from 'antd'
 import {ReactComponent as Logo} from '../../assets/img/logo.svg'
 
-export const AuthLayout = () => {
+export const AuthLayout: React.FC = () => {
   return (
     <div className="as__auth-layout">
       <Flex className="as__auth" wrap="wrap">

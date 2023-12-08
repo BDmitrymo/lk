@@ -18,3 +18,14 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .as__admin-layout {
+    grid-template-columns: 0;
+
+    .as__admin-layout_body {
+      padding: 10px;
+    }
+  }
+}
+

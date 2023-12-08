@@ -1,18 +1,29 @@
 import {MenuAdmin} from '@/components/admin/MenuAdmin/MenuAdmin'
 import {SwitchLang} from '@/components/ui/SwitchLang'
-import {ReactComponent as Logo} from '../../../assets/img/logo.svg'
 import {SwitchTheme} from '@/components/ui/SwitchTheme/SwitchTheme'
-import './LeftPanelAdmin.scss'
 import {Flex} from 'antd'
-import React from 'react'
+import React, {useRef} from 'react'
+import './LeftPanelAdmin.scss'
 
 export const LeftPanelAdmin = () => {
+  const leftPanel = useRef<HTMLElement>(null)
+  const handleCloseLeftPanel = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (leftPanel.current && e.defaultPrevented) {
+      leftPanel.current.classList.remove('as__left-panel-admin_active')
+    }
+  }
+
   return (
-    <Flex className="as__left-panel-admin" align="center" justify="space-between" vertical>
-      <Flex className="as__left-panel-admin_box-logo" justify="center" align="center">
-        <Logo className="as__logo" />
+    <Flex
+      ref={leftPanel}
+      className="as__left-panel-admin"
+      align="center"
+      onClick={(e) => handleCloseLeftPanel(e)}
+      vertical
+    >
+      <Flex style={{height: '100%'}} align="center">
+        <MenuAdmin />
       </Flex>
-      <MenuAdmin />
       <Flex gap={10} justify="center" vertical>
         <SwitchLang />
         <SwitchTheme />

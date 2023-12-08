@@ -5,6 +5,7 @@ import {StatisticsPage} from '@/pages/StatisticsPage'
 import React, {FunctionComponent, ReactNode} from 'react'
 
 interface IPathItem {
+  name?: string
   path: string
   component: FunctionComponent
   icon?: ReactNode
@@ -17,11 +18,13 @@ interface IPathRouters {
 export const PATH_ROUTES: IPathRouters = {
   admin: [
     {
+      name: 'Чат',
       path: '/chat',
       component: ChatPage,
       icon: <i className="fa-solid fa-message" />,
     },
     {
+      name: 'Статистика',
       path: '/statistics',
       component: StatisticsPage,
       icon: <i className="fa-solid fa-chart-pie" />,
