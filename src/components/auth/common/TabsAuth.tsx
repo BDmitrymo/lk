@@ -43,6 +43,7 @@ export const TabsAuth = ({defaultActiveTab, items}: ITabsAuth) => {
     <div className="as__auth_tabs" style={{width: '100%'}}>
       <Flex justify="center">
         <Segmented
+          className="as__auth_segmented"
           size="large"
           options={options}
           value={activeTab?.value}

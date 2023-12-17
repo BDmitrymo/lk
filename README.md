@@ -28,3 +28,4 @@ https://react.i18next.com/getting-started
 https://fontawesome.com/icons
 
 https://codepen.io/TurkAysenur/pen/ZEpxeYm
+https://dribbble.com/shots/21547168-Project-Management-Dashboard

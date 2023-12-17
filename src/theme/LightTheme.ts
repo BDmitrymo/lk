@@ -6,12 +6,12 @@ export const LIGHT_THEME = {
     boxShadow: '0',
     colorWarningOutline: '0',
     controlOutline: '0',
-    controlOutlineWidth: 0,
+    controlOutlineWidth: 0
   },
   components: {
     Segmented: {
       itemSelectedBg: '#47afff',
-      itemSelectedColor: '#ffffff',
+      itemSelectedColor: '#fff'
     },
     Form: {
       itemMarginBottom: 15,
@@ -23,6 +23,6 @@ export const LIGHT_THEME = {
     },
     Select: {
       selectorBg: '#fff',
-    },
+    }
   },
 }
